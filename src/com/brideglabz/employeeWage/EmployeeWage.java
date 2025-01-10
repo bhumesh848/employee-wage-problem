@@ -7,23 +7,23 @@ public class EmployeeWage {
     public static final int FULL_DAY_HOUR = 8;
     public static final int PART_TIME_HOUR = 8;
     public static final int WORKING_DAYS_PER_MONTH = 20;
+    public static final int WORKING_HOUR = 100;
 
 
     public static void main(String[] args) {
         System.out.println("Welcome to employee wage computation program");
         double randomNumber = Math.random() * 2;
-        System.out.println("random number generated "+ randomNumber);
+        System.out.println("random number generated " + randomNumber);
         int result = (int) randomNumber;
-        System.out.println("result : "+ result);
-        if (result == 1){
+        System.out.println("result : " + result);
+        if (result == 1) {
             System.out.println("Employee is present");
-        }
-        else {
+        } else {
             System.out.println("Employee is absent");
         }
 
         int dailyEmpWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
-        System.out.println("Daily Employee Wage is "+ dailyEmpWage);
+        System.out.println("Daily Employee Wage is " + dailyEmpWage);
 
         int partTimeWagePerhour = 15;
         int partTimeWage = PART_TIME_HOUR * partTimeWagePerhour;
@@ -35,12 +35,12 @@ public class EmployeeWage {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
 
-        switch (number){
-            case 1 :
-                System.out.println("Daily Employee Wage is "+ dailyEmpWage);
+        switch (number) {
+            case 1:
+                System.out.println("Daily Employee Wage is " + dailyEmpWage);
                 break;
             case 2:
-                System.out.println("part Time Employe wage is "+ partTimeWage);
+                System.out.println("part Time Employe wage is " + partTimeWage);
                 break;
             default:
                 System.out.println("Invalid Input , press 1 or 2 .");
@@ -48,5 +48,10 @@ public class EmployeeWage {
 
         int wageForMonth = WORKING_DAYS_PER_MONTH * dailyEmpWage;
         System.out.println("Wages for a month would be " + wageForMonth);
+
+        int wageTillHundredHour = WAGE_PER_HOUR * WORKING_HOUR;
+        System.out.println("Wages till total 100 working hours is  " + wageTillHundredHour);
+
+
     }
 }
